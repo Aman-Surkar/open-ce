@@ -2,16 +2,18 @@ builder_version: ">=13.0.0"
 
 packages:
   - feedstock : https://github.com/conda-forge/protobuf-feedstock.git
-    git_tag : bd7dc1e77a9284e8aad26c6f02753797499a764f
+    git_tag : e861313a9e630ba9cd4849cd76f60df586fac0c2
     patches :
-      - feedstock-patches/protobuf/0001-Fixed-protobuf-build.patch
-      - feedstock-patches/protobuf/0001-update-protobuf-for-p10.patch
+       - feedstock-patches/protobuf/0001-Update-Protobuf.patch
+#      - feedstock-patches/protobuf/0001-Fixed-protobuf-build.patch
+#      - feedstock-patches/protobuf/0001-update-protobuf-for-p10.patch
   - feedstock : https://github.com/conda-forge/libprotobuf-feedstock.git
-    git_tag : a2b38e3077de05fe7b71e8d58a73935ecd0891ea
+    git_tag : 47734faf4459f2635b414f330816a5e7bb359600
     patches :
-      - feedstock-patches/protobuf/0001-Fixed-libprotobuf-Build.patch
-      - feedstock-patches/protobuf/0001-update-libprotobuf-for-p10.patch
-      - feedstock-patches/protobuf/0001-Use-LIMIT_BUILD_RESOURCES-flag-libprotobuf.patch #[not s390x]
+       - feedstock-patches/protobuf/0001-Update-libprotobuf.patch
+#      - feedstock-patches/protobuf/0001-Fixed-libprotobuf-Build.patch
+#      - feedstock-patches/protobuf/0001-update-libprotobuf-for-p10.patch
+#      - feedstock-patches/protobuf/0001-Use-LIMIT_BUILD_RESOURCES-flag-libprotobuf.patch #[not s390x]
   # Build scikit-learn as scikit-learn Anaconda requires numpy<1.25
   - feedstock : https://github.com/AnacondaRecipes/scikit-learn-feedstock.git   # [py==311]
     git_tag : 275edb5b1227da2b17dddad3bd1457eb84e4701f                          # [py==311]
@@ -19,3 +21,11 @@ packages:
       - feedstock-patches/scikit-learn/0001-changes-for-opence.patch            # [py==311]
   - feedstock : https://github.com/conda-forge/filesystem-spec-feedstock
     git_tag : be754febf038a93d01e6f7de85d5489ced355f88
+  - feedstock : https://github.com/conda-forge/abseil-cpp-feedstock.git
+    git_tag : 3659d27fbf50cad5abf8511d61338943fec99577
+    patches :                                                       #[ppc_arch == 'p10']
+      - feedstock-patches/abseil-cpp/0001-P10-changes.patch         #[ppc_arch == 'p10']    
+  - feedstock : https://github.com/conda-forge/rsync-feedstock.git
+    git_tag : a2c2ba62d607a4b12fd74b29e3de7c33e7e9cf53
+  - feedstock : https://github.com/conda-forge/popt-feedstock
+    git_tag : d27ef675381c2e3c1d2f91bc878c69b1b245d524

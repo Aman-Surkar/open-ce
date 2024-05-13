@@ -1,0 +1,59 @@
+From 4f119f627f4859605a414a78e5341557379295e1 Mon Sep 17 00:00:00 2001
+From: Aman Surkar <Aman.Surkar@ibm.com>
+Date: Mon, 13 May 2024 09:14:51 +0000
+Subject: [PATCH] Update libprotobuf
+
+---
+ recipe/build-lib.sh | 6 ++++--
+ recipe/meta.yaml    | 8 ++++----
+ 2 files changed, 8 insertions(+), 6 deletions(-)
+
+diff --git a/recipe/build-lib.sh b/recipe/build-lib.sh
+index 044c3c2..b087c37 100644
+--- a/recipe/build-lib.sh
++++ b/recipe/build-lib.sh
+@@ -4,11 +4,13 @@ set -ex
+ if [[ "$(uname)" == "Linux" ]]; then
+     # protobuf uses PROTOBUF_OPT_FLAG to set the optimization level
+     # unit test can fail if optmization above 0 are used.
+-    CPPFLAGS="${CPPFLAGS//-O[0-9]/}"
+-    CXXFLAGS="${CXXFLAGS//-O[0-9]/}"
++#    CPPFLAGS="${CPPFLAGS//-O[0-9]/}"
++#    CXXFLAGS="${CXXFLAGS//-O[0-9]/}"
+     export PROTOBUF_OPT_FLAG="-O2"
+     # to improve performance, disable checks intended for debugging
+     CXXFLAGS="$CXXFLAGS -DNDEBUG"
++    CXXFLAGS="$CXXFLAGS -DNDEBUG -fplt"
++    CFLAGS="$CFLAGS -fplt"
+ elif [[ "$(uname)" == "Darwin" ]]; then
+     # See https://conda-forge.org/docs/maintainer/knowledge_base.html#newer-c-features-with-old-sdk
+     CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index 295a0bb..b247534 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -53,8 +53,8 @@ outputs:
+         - jsoncpp
+     requirements:
+       build:
+-        - {{ compiler('c') }}
+-        - {{ compiler('cxx') }}
++        - {{ compiler('c') }}    #[ppc_arch != "p10"]
++        - {{ compiler('cxx') }}  #[ppc_arch != "p10"]
+         - cmake
+         - ninja
+       host:
+@@ -122,8 +122,8 @@ outputs:
+         - jsoncpp
+     requirements:
+       build:
+-        - {{ compiler('c') }}
+-        - {{ compiler('cxx') }}
++        - {{ compiler('c') }}     #[ppc_arch != "p10"]
++        - {{ compiler('cxx') }}   #[ppc_arch != "p10"]
+         - cmake
+         - ninja
+       host:
+-- 
+2.40.1
+

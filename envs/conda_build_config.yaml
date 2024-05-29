@@ -206,7 +206,7 @@ onnxconverter_common:
 onnx_graphsurgeon:
   - 0.2.*
 openblas:
-  - 0.3.26.*      #[not s390x]
+  - 0.3.27.*      #[not s390x]
   - 0.3.21.*      #[s390x]
 opencv:
   - 4.8.*
@@ -243,7 +243,7 @@ python:
   - 3.10
   - 3.11
 pytorch:
-  - 2.1.*
+  - 2.3.*
 pytorch_lightning:
   - 2.1.*
 pytorch_scatter:
@@ -309,9 +309,9 @@ tiktoken:
 torchmetrics:
   - 1.2.*
 torchtext:
-  - 0.16.*
+  - 0.18.*
 torchvision:
-  - 0.16.*
+  - 0.18.*
 tqdm:
   - 4.*
 typer:

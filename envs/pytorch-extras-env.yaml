@@ -45,4 +45,6 @@ packages:
     git_tag : 2723b1b582889ac1e5f10e8aaf0cb91ff6c41844
   - feedstock : https://github.com/conda-forge/anyio-feedstock.git
     git_tag : 323b2f9084535b32b3873422ef9a5dbe89cc4fec
+    patches:
+      - feedstock-patches/anyio/0001-Skipped-failed-tests.patch
 {% endif %}

@@ -15,13 +15,13 @@ packages:
   - feedstock : https://github.com/conda-forge/fire-feedstock
     git_tag : a691d408ec35d71fdf9aecbed6efb408affb2b80
   - feedstock : https://github.com/conda-forge/fastapi-feedstock
-    git_tag : dd3ad2bf3128b222fa0bae834499dcb6232c9e47
+    git_tag : 0111b8557549927c7ccfb6b318359354b089ed52
   - feedstock : https://github.com/conda-forge/starlette-feedstock
-    git_tag : 9eebdc51a4cb9f3222f6f9250c80c563f869b15e
+    git_tag : 0f83909ec369aff2a7b7d9a0fea89f76aa31521a
   - feedstock : https://github.com/conda-forge/python-multipart-feedstock
-    git_tag : d40967f6afce79de33c3870798301aa797c490a7
+    git_tag : 36e3dc0fcd8dfbc35e727291ab892486c5b2c2a0
   - feedstock : https://github.com/conda-forge/deepdiff-feedstock
-    git_tag : f7914a1d64cf029852de9d6a9c362c2a40374a4f
+    git_tag : c6e959fd6032beed1f893c38aa7cbe967cdb3214
   - feedstock : https://github.com/conda-forge/ordered-set-feedstock
     git_tag : ffb018797625d7f932bdd2f608d4f0813e227065
   - feedstock : https://github.com/AnacondaRecipes/uvicorn-feedstock.git
@@ -32,7 +32,7 @@ packages:
   - feedstock : https://github.com/conda-forge/starsessions-feedstock
     git_tag : bfaa9dcec65958ea57cb839c00b7c4a496e2f033
   - feedstock : https://github.com/conda-forge/inquirer-feedstock
-    git_tag : fc7287c59b302b2b01a1dd77a6bdb89020a732b2
+    git_tag : ae8c1ed717ed112d59aeff092d82595c9b675c3d
     patches:
       - feedstock-patches/inquirer/0001-disable-pip-check.patch
   - feedstock : https://github.com/conda-forge/blessed-feedstock
@@ -43,4 +43,6 @@ packages:
       - feedstock-patches/aioredis/0001-fix-for-python-3.11.patch
   - feedstock : https://github.com/conda-forge/dateutils-feedstock
     git_tag : 2723b1b582889ac1e5f10e8aaf0cb91ff6c41844
+  - feedstock : https://github.com/conda-forge/anyio-feedstock.git
+    git_tag : 323b2f9084535b32b3873422ef9a5dbe89cc4fec
 {% endif %}

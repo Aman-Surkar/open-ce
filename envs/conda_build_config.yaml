@@ -245,7 +245,7 @@ python:
 pytorch:
   - 2.3.*
 pytorch_lightning:
-  - 2.1.*
+  - 2.2.*
 pytorch_scatter:
   - 2.1.2
 pytorch_sparse:
@@ -307,7 +307,7 @@ tf_estimator:
 tiktoken:
   - 0.6.0
 torchmetrics:
-  - 1.2.*
+  - 1.4.*
 torchtext:
   - 0.18.*
 torchvision:

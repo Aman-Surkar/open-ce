@@ -12,6 +12,8 @@ packages:
   - feedstock : libsndfile
   - feedstock : https://github.com/conda-forge/backoff-feedstock
     git_tag : 0bbeb5afb679ceedeb7e9625d4c1e6022dfdb9fe
+    patches:                                                          #[ppc64le]
+      - feedstock-patches/backoff/0001-Relaxed-poetry-core-pin.patch  #[ppc64le]
   - feedstock : https://github.com/conda-forge/fire-feedstock
     git_tag : a691d408ec35d71fdf9aecbed6efb408affb2b80
   - feedstock : https://github.com/conda-forge/fastapi-feedstock
@@ -31,6 +33,8 @@ packages:
       - feedstock-patches/uvicorn/0001-Removed-skip-build-for-py310.patch
   - feedstock : https://github.com/conda-forge/starsessions-feedstock
     git_tag : bfaa9dcec65958ea57cb839c00b7c4a496e2f033
+    patches:                                                               #[ppc64le]
+      - feedstock-patches/starsessions/0001-Relaxed-poetry-core-pin.patch  #[ppc64le]
   - feedstock : https://github.com/conda-forge/inquirer-feedstock
     git_tag : ae8c1ed717ed112d59aeff092d82595c9b675c3d
     patches:

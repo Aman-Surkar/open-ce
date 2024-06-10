@@ -1,0 +1,25 @@
+From ccb27088d3129badc0dc981b6bb67e820a4a4278 Mon Sep 17 00:00:00 2001
+From: Aman Surkar <Aman.Surkar@ibm.com>
+Date: Mon, 10 Jun 2024 08:19:22 +0000
+Subject: [PATCH] Relaxed poetry-core pin
+
+---
+ recipe/meta.yaml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index aae68c1..827d318 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -19,7 +19,7 @@ requirements:
+   host:
+     - pip
+     - python >=3.7
+-    - poetry-core >=1.0.0
++    - poetry-core 1.5.2
+   run:
+     - python >=3.7
+ 
+-- 
+2.40.1
+
